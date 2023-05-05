@@ -1,0 +1,40 @@
+@import '../../style/variables.scss';
+
+.main {
+  .intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 180px;
+  }
+
+  .intro_title {
+    font-weight: 700;
+    font-size: 58px;
+    line-height: 70px;
+    letter-spacing: -1px;
+    color: $solid_heading;
+  }
+
+  &.dark {
+    .intro_title {
+      color: $light_titles;
+    }
+  }
+
+  .gradient {
+    background: $gradient_heading;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .intro_img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 50%;
+    background: $gradient_heading;
+    border: 9px solid transparent;
+    background-origin: border-box;
+  }
+}

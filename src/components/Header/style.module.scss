@@ -1,0 +1,74 @@
+@import '../../style/variables.scss';
+
+.header {
+  font-family: 'DM Sans', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+
+  &.dark {
+    .menu_list {
+      .menu_link {
+        color: $light_content;
+      }
+
+      .menu_social {
+        path {
+          fill: $light_content;
+        }
+      }
+    }
+  }
+}
+
+.logo {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  letter-spacing: -1px;
+  background: $gradient_heading;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.menu_list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 790px;
+
+  .menu_link {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    color: $dark_content;
+    transition: all 0.2s ease 0s;
+
+    &:hover{
+      opacity: .6;
+    }
+  }
+
+  .menu_social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 130px;
+
+    path {
+      fill: $dark_content;
+    }
+
+    .social_link{
+      transition: all 0.2s ease 0s;
+
+      &:hover{
+        opacity: .6;
+      }
+    }
+  }
+}

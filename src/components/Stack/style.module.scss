@@ -1,0 +1,93 @@
+@import '../../style/variables.scss';
+
+.stack {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 280px;
+
+  &.dark {
+    .title {
+      color: $solid_heading_dark;
+    }
+    .sub_title {
+      color: $light_content;
+    }
+    .stack_item {
+      .stack_name {
+        color: $light_content;
+      }
+    }
+    .github{
+        path{
+            fill: #FFFEFE;
+        }
+      }
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 26px;
+    color: $solid_heading;
+  }
+
+  .sub_title {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 26px;
+    color: $dark_content;
+    margin-top: 50px;
+  }
+
+  .stack_list {
+    margin-top: 130px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 32px;
+    grid-auto-flow: dense;
+    align-items: center;
+    justify-items: center;
+    max-width: 1000px;
+    width: 100%;
+  }
+
+
+
+  .stack_item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    .stack_name {
+      position: absolute;
+      opacity: 0;
+      bottom: 0;
+      transition: all 0.2s ease 0s;
+      color: $dark_content;
+    }
+    svg {
+      transition: all 0.2s ease 0s;
+    }
+    &:hover {
+      svg {
+        transition: all 0.2s ease 0s;
+        transform: translateY(-25px);
+      }
+
+      .stack_name {
+        position: absolute;
+        opacity: 1;
+        transition: all 0.2s ease 0s;
+      }
+    }
+  }
+
+  .github{
+    path{
+        fill: #000;
+    }
+  }
+}

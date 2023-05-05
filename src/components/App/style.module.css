@@ -1,0 +1,13 @@
+.container{
+    max-width: 1250px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+body{
+    background-color: #fff;
+}
+
+body.dark{
+    background-color: #191919;
+}
