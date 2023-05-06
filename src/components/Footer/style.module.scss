@@ -113,10 +113,24 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
+        animation: gradientAnimation 5s infinite linear; // 10s - скорость анимации
+        background-size: 400%;
         transition: all 0.2s ease 0s;
 
         &:hover {
           opacity: 0.6;
+        }
+
+        @keyframes gradientAnimation {
+          0% {
+              background-position: 80% 0%;
+          }
+          50% {
+              background-position: 20% 100%;
+          }
+          100% {
+              background-position: 80% 0%;
+          }
         }
       }
     }

@@ -1,0 +1,115 @@
+@import '../../style/variables.scss';
+
+.project_block {
+  background-color: #fff;
+  box-shadow: 2px 2px 100px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  height: 100%;
+  max-width: 374px;
+  display: flex;
+  flex-direction: column;
+
+  .img {
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  .info {
+    padding: 19px 28px 25px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .name {
+    color: #000;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  .desc {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    color: $dark_content;
+    margin-top: 15px;
+  }
+
+  .bottom_info {
+    margin-top: 20px;
+  }
+
+  .tech_title {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: $solid_heading;
+  }
+
+  .stacks {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 26px;
+    color: $solid_heading;
+  }
+
+  .links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  .link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    text-decoration-line: underline;
+    color: #000000;
+    path {
+      stroke: #000;
+    }
+    .git path {
+      fill: #000;
+    }
+  }
+  &.dark {
+    background-color: #363636;
+
+    .name {
+      color: $solid_heading_dark;
+    }
+
+    .desc {
+      color: $light_content;
+    }
+
+    .tech_title {
+      color: $solid_heading_dark;
+    }
+
+    .stacks {
+      color: $solid_heading_dark;
+    }
+
+    .link {
+      color: #fff;
+      path {
+        stroke: #fcfcfc;
+      }
+      .git {
+        path {
+          fill: #fcfcfc;
+        }
+      }
+    }
+  }
+}

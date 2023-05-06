@@ -10,11 +10,11 @@ function Header() {
         A.Merlinov
       </Link>
       <nav className={style.menu_list}>
-        <Link className={style.menu_link}>Home</Link>
-        <Link className={style.menu_link}>About</Link>
-        <Link className={style.menu_link}>Tech Stack</Link>
-        <Link className={style.menu_link}>Projects</Link>
-        <Link className={style.menu_link}>Contact</Link>
+        <Link to='/' className={style.menu_link}>Home</Link>
+        <Link to='/about' className={style.menu_link}>About</Link>
+        <Link to='/stack' className={style.menu_link}>Tech Stack</Link>
+        <Link to='/projects' className={style.menu_link}>Projects</Link>
+        <Link to='/contacts' className={style.menu_link}>Contact</Link>
 
         <div className={style.menu_social}>
           <a

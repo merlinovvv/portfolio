@@ -5,7 +5,7 @@ import { isNight } from '../../utils/common';
 function Stack({home}) {
   return (
     <div className={`${style.stack} ${isNight() ? style.dark : ''}`}>
-      <div className={`${style.text} `} style={!home ? {textAlign: 'start'} : {textAlign: 'center'}}>
+      <div className={style.text} style={!home ? {textAlign: 'start'} : {textAlign: 'center'}}>
         <h2 className={style.title}>My Tech Stack</h2>
         <p className={style.sub_title}>
           Technologies I’ve been working with recently

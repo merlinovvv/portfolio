@@ -1,0 +1,108 @@
+@import '../../style/variables.scss';
+
+.about {
+  display: flex;
+  flex-direction: column;
+  max-width: 705px;
+  margin-top: 120px;
+
+  .about_block {
+    margin-bottom: 38px;
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 52px;
+    letter-spacing: -0.4px;
+    color: $solid_heading;
+    margin-bottom: 38px;
+  }
+
+  .text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: $dark_content;
+  }
+
+  .institution {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 24px;
+    border-bottom: 2px solid #ebeaed;
+  }
+
+  .name_specialty {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    color: $dark_content;
+    margin-bottom: 4px;
+  }
+
+  .name_institution {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    color: $light_content;
+  }
+
+  .second {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .employment {
+    background: #d7ffe0;
+    border-radius: 100px;
+    width: 100%;
+    max-width: 84px;
+    height: 24px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 9px;
+    line-height: 26px;
+    color: #018c0f;
+  }
+
+  .time {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    color: $light_content;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &.dark {
+    .title {
+      color: $solid_heading_dark;
+    }
+    .text {
+      color: $light_content;
+    }
+    .institution {
+      border-bottom: 2px solid #ebeaed;
+    }
+    .name_specialty {
+      color: $light_content;
+    }
+    .name_institution {
+      color: $light_content;
+    }
+    .time {
+      color: $light_content;
+    }
+  }
+}

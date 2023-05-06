@@ -1,0 +1,44 @@
+@import '../../style/variables.scss';
+
+.projects {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 220px;
+
+  .title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 26px;
+    color: $solid_heading;
+  }
+
+  .sub_title {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 26px;
+    color: $dark_content;
+    margin-top: 50px;
+  }
+
+  .projects_list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(374px, 1fr));
+    row-gap: 40px;
+    column-gap: 40px;
+    grid-auto-flow: dense;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    margin-top: 100px;
+  }
+
+  &.dark {
+    .title {
+      color: $solid_heading_dark;
+    }
+    .sub_title {
+      color: $light_content;
+    }
+  }
+}

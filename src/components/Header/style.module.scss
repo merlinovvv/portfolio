@@ -31,6 +31,20 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  animation: gradientAnimation 5s infinite linear; // 10s - скорость анимации
+  background-size: 400%;
+}
+
+@keyframes gradientAnimation {
+  0% {
+      background-position: 80% 0%;
+  }
+  50% {
+      background-position: 20% 100%;
+  }
+  100% {
+      background-position: 80% 0%;
+  }
 }
 
 .menu_list {
