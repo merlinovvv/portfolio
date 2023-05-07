@@ -5,6 +5,7 @@ import { isNight } from '../../utils/common';
 import Background from '../Background/Background';
 
 function App() {
+
   isNight()
     ? document.body.classList.add(style.dark)
     : document.body.classList.remove(style.dark);

@@ -2,12 +2,15 @@ import React from 'react';
 import style from './style.module.scss';
 import ProjectBlock from '../ProjectBlock/ProjectBlock';
 import { isNight, dataBase } from '../../utils/common';
-function Projects({ home }) {
+import { motion } from 'framer-motion';
+function Projects() {
   return (
-    <div className={`${style.projects} ${isNight() ? style.dark : ''}`}>
-      <div
-        className={style.text}
-        style={!home ? { textAlign: 'start' } : { textAlign: 'center' }}>
+    <motion.main
+      className={`${style.projects} ${isNight() ? style.dark : ''}`}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}>
+      <div className={style.text}>
         <h2 className={style.title}>Projects</h2>
         <p className={style.sub_title}>Projects I have done to date</p>
       </div>
@@ -17,7 +20,7 @@ function Projects({ home }) {
           return <ProjectBlock key={id} {...item} />;
         })}
       </div>
-    </div>
+    </motion.main>
   );
 }
 

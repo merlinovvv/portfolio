@@ -10,10 +10,88 @@
       content="Web site created using create-react-app" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Josefin+Sans&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Josefin+Sans&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet" />
     <title>A.Merlinov - your web developer</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        transition: all 1s ease 0s;
+      }
+      .loader_block {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #191919;
+        top: 0;
+        transition: all 1s ease 0s;
+        z-index: 10000;
+      }
+
+      .loader {
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 400;
+        font-size: 50px;
+        letter-spacing: -1px;
+        background: linear-gradient(
+          149deg,
+          rgb(24, 187, 103) 0%,
+          rgba(106, 57, 175, 1) 42%,
+          rgba(187, 24, 148, 1) 72%,
+          rgba(115, 53, 134, 1) 100%,
+          rgb(24, 187, 103) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: gradientAnimation 5s infinite linear;
+        background-size: 400%;
+        animation: smokeOut 1s ease-in-out infinite alternate;
+      }
+      .loader:before {
+        content: 'wow, it`s loading👍';
+      }
+
+      @keyframes smokeOut {
+        0% {
+          background-position: 80% 0%;
+        }
+        50% {
+          background-position: 20% 100%;
+        }
+        100% {
+          background-position: 80% 0%;
+        }
+        100% {
+          opacity: 0.3;
+          filter: blur(5px);
+          letter-spacing: 0px;
+        }
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div id="loader_block" class="loader_block">
+        <div class="loader"></div>
+      </div>
+    </div>
+    <script>
+      const hour = new Date().getHours();
+      const loaderBlock = document.getElementById('loader_block');
+      if (hour >= 19 || hour < 6) {
+        loaderBlock.style.backgroundColor = '#191919';
+      } else {
+        loaderBlock.style.backgroundColor = '#fff';
+      }
+    </script>
   </body>
 </html>

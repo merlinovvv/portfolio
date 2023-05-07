@@ -10,16 +10,26 @@ function Header() {
         A.Merlinov
       </Link>
       <nav className={style.menu_list}>
-        <Link to='/' className={style.menu_link}>Home</Link>
-        <Link to='/about' className={style.menu_link}>About</Link>
-        <Link to='/stack' className={style.menu_link}>Tech Stack</Link>
-        <Link to='/projects' className={style.menu_link}>Projects</Link>
-        <Link to='/contacts' className={style.menu_link}>Contact</Link>
+        <Link to="/" className={style.menu_link}>
+          Home
+        </Link>
+        <Link to="/about" className={style.menu_link}>
+          About
+        </Link>
+        <Link to="/stack" className={style.menu_link}>
+          Tech Stack
+        </Link>
+        <Link to="/projects" className={style.menu_link}>
+          Projects
+        </Link>
+        <Link to="/contact" className={style.menu_link}>
+          Contact
+        </Link>
 
         <div className={style.menu_social}>
           <a
             className={style.social_link}
-            href="/"
+            href="https://github.com/merlinovvv"
             target="_blank"
             rel="noopener noreferrer">
             <svg
@@ -38,7 +48,7 @@ function Header() {
           </a>
           <a
             className={style.social_link}
-            href="/"
+            href="https://t.me/merlinovvv"
             target="_blank"
             rel="noopener noreferrer">
             <svg
@@ -55,7 +65,7 @@ function Header() {
           </a>
           <a
             className={style.social_link}
-            href="/"
+            href="https://www.linkedin.com/in/merlinov/"
             target="_blank"
             rel="noopener noreferrer">
             <svg

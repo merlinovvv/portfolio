@@ -90,7 +90,7 @@ function Footer() {
           <Link to='/about' className={style.menu_link}>About</Link>
           <Link to='/stack' className={style.menu_link}>Tech Stack</Link>
           <Link to='/projects' className={style.menu_link}>Projects</Link>
-          <Link to='/contacts' className={style.menu_link}>Contact</Link>
+          <Link to='/contact' className={style.menu_link}>Contact</Link>
         </nav>
         <p className={style.copyright}>
           Designed by&nbsp;<Link className={style.developers}> Pavan MG. </Link>

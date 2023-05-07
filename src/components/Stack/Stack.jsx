@@ -1,11 +1,16 @@
 import React from 'react';
 import style from './style.module.scss';
 import { isNight } from '../../utils/common';
+import { motion } from 'framer-motion';
 
-function Stack({home}) {
+function Stack() {
   return (
-    <div className={`${style.stack} ${isNight() ? style.dark : ''}`}>
-      <div className={style.text} style={!home ? {textAlign: 'start'} : {textAlign: 'center'}}>
+    <motion.main
+    className={`${style.stack} ${isNight() ? style.dark : ''}`}
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}>
+      <div className={style.text}>
         <h2 className={style.title}>My Tech Stack</h2>
         <p className={style.sub_title}>
           Technologies I’ve been working with recently
@@ -235,7 +240,7 @@ function Stack({home}) {
           <p className={style.stack_name}>GitHub</p>
         </div>
       </div>
-    </div>
+  </motion.main>
   );
 }
 
