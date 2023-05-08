@@ -16,6 +16,11 @@ function Form() {
       fontSize: '16px',
       fontWeight: '400',
       color: '#a7a7a7',
+      padding: 0
+    }),
+    valueContainer: (provided, state) => ({
+      ...provided,
+      padding: 0
     }),
     control: (provided, state) => ({
       ...provided,
@@ -203,6 +208,7 @@ function Form() {
               </svg>
             </span>
             <Select
+            className={style.input}
              key={`1_${selectKey}`}
               styles={customStyles}
               isClearable={true}
@@ -390,6 +396,7 @@ function Form() {
               </svg>
             </span>
             <Select
+             className={style.input}
             key={`2_${selectKey}`}
               styles={customStyles}
               isClearable={true}

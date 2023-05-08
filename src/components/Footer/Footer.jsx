@@ -93,8 +93,7 @@ function Footer() {
           <Link to='/contact' className={style.menu_link}>Contact</Link>
         </nav>
         <p className={style.copyright}>
-          Designed by&nbsp;<Link className={style.developers}> Pavan MG. </Link>
-          &nbsp; Development by&nbsp;
+         Development by&nbsp;
           <Link className={style.developers}> A.Merlinov </Link>
         </p>
       </div>

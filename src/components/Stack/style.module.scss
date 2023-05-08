@@ -18,14 +18,14 @@
         color: $light_content;
       }
     }
-    .github{
-        path{
-            fill: #FFFEFE;
-        }
+    .github {
+      path {
+        fill: #fffefe;
       }
+    }
   }
 
-  .text{
+  .text {
     text-align: center;
   }
 
@@ -54,9 +54,8 @@
     justify-items: center;
     max-width: 1000px;
     width: 100%;
+    justify-content: space-between;
   }
-
-
 
   .stack_item {
     position: relative;
@@ -89,9 +88,139 @@
     }
   }
 
-  .github{
-    path{
-        fill: #000;
+  .github {
+    path {
+      fill: #000;
     }
   }
+}
+
+@media (max-width: 1024px) {
+  .stack {
+    margin-top: 180px;
+    .title {
+      font-size: 42px;
+      line-height: 50px;
+    }
+    .sub_title {
+      font-size: 26px;
+      line-height: 26px;
+      margin-top: 20px;
+    }
+    .stack_list {
+      margin-top: 80px;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-gap: 20px;
+      max-width: 1000px;
+    }
+    .stack_item {
+      svg {
+        max-width: 85px;
+      }
+      &:hover {
+        svg {
+          transition: all 0.2s ease 0s;
+          transform: translateY(-15px);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 880px) {
+  .stack {
+    margin-top: 180px;
+    .title {
+      font-size: 38px;
+      line-height: 45px;
+    }
+    .sub_title {
+      font-size: 26px;
+      line-height: 26px;
+      margin-top: 20px;
+    }
+    .stack_list {
+      margin-top: 50px;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      grid-gap: 20px;
+      max-width: 1000px;
+    }
+    
+  }
+}
+
+@media (max-width: 728px) {
+  .stack {
+    margin-top: 120px;
+    .title {
+      font-size: 32px;
+      line-height: 39px;
+    }
+    .sub_title {
+      font-size: 20px;
+      line-height: 24px;
+      margin-top: 10px;
+    }
+    .stack_list {
+      margin-top: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(110px, 0.5fr));
+      grid-gap: 10px;
+      max-width: 1000px;
+    }
+    .stack_item {
+      svg {
+        max-width: 70px;
+      }
+      &:hover {
+        svg {
+          transition: all 0.2s ease 0s;
+          transform: translateY(-15px);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 628px) {
+  .stack {
+    margin-top: 120px;
+    .title {
+      font-size: 28px;
+      line-height: 33px;
+    }
+    .sub_title {
+      font-size: 18px;
+      line-height: 22px;
+      margin-top: 10px;
+    }
+    .stack_list {
+      margin-top: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(110px, 0.5fr));
+      grid-gap: 10px;
+      max-width: 1000px;
+    }
+    .stack_item {
+      svg {
+        max-width: 70px;
+      }
+      &:hover {
+        svg {
+          transition: all 0.2s ease 0s;
+          transform: translateY(-15px);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+}
+
+@media (max-width: 480px) {
+}
+
+@media (max-width: 425px) {
+}
+
+@media (max-width: 375px) {
 }

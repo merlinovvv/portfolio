@@ -37,43 +37,22 @@
       }
 
       .loader {
-        font-family: 'Josefin Sans', sans-serif;
-        font-weight: 400;
-        font-size: 50px;
-        letter-spacing: -1px;
-        background: linear-gradient(
-          149deg,
-          rgb(24, 187, 103) 0%,
-          rgba(106, 57, 175, 1) 42%,
-          rgba(187, 24, 148, 1) 72%,
-          rgba(115, 53, 134, 1) 100%,
-          rgb(24, 187, 103) 100%
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        animation: gradientAnimation 5s infinite linear;
-        background-size: 400%;
-        animation: smokeOut 1s ease-in-out infinite alternate;
-      }
-      .loader:before {
-        content: 'wow, it`s loading👍';
+        width: 88px;
+        height: 88px;
+        border-radius: 50%;
+        display: inline-block;
+        border-top: 3px solid #fff;
+        border-right: 3px solid transparent;
+        box-sizing: border-box;
+        animation: rotation 1s linear infinite;
       }
 
-      @keyframes smokeOut {
+      @keyframes rotation {
         0% {
-          background-position: 80% 0%;
-        }
-        50% {
-          background-position: 20% 100%;
+          transform: rotate(0deg);
         }
         100% {
-          background-position: 80% 0%;
-        }
-        100% {
-          opacity: 0.3;
-          filter: blur(5px);
-          letter-spacing: 0px;
+          transform: rotate(360deg);
         }
       }
     </style>
@@ -81,16 +60,19 @@
   <body>
     <div id="root">
       <div id="loader_block" class="loader_block">
-        <div class="loader"></div>
+        <div id="loader" class="loader"></div>
       </div>
     </div>
     <script>
       const hour = new Date().getHours();
       const loaderBlock = document.getElementById('loader_block');
+      const loader = document.getElementById('loader')
       if (hour >= 19 || hour < 6) {
         loaderBlock.style.backgroundColor = '#191919';
+
       } else {
         loaderBlock.style.backgroundColor = '#fff';
+        loader.style.borderTop = '3px solid #191919'
       }
     </script>
   </body>

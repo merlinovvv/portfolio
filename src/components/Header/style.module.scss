@@ -6,7 +6,9 @@
   align-items: center;
   justify-content: space-between;
   margin-top: 30px;
-
+  .burger_container {
+    display: none;
+  }
   &.dark {
     .menu_list {
       .menu_link {
@@ -37,14 +39,19 @@
 
 @keyframes gradientAnimation {
   0% {
-      background-position: 80% 0%;
+    background-position: 80% 0%;
   }
   50% {
-      background-position: 20% 100%;
+    background-position: 20% 100%;
   }
   100% {
-      background-position: 80% 0%;
+    background-position: 80% 0%;
   }
+}
+
+.menu {
+  width: 100%;
+  max-width: 790px;
 }
 
 .menu_list {
@@ -52,7 +59,6 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: 790px;
 
   .menu_link {
     font-weight: 500;
@@ -61,8 +67,8 @@
     color: $dark_content;
     transition: all 0.2s ease 0s;
 
-    &:hover{
-      opacity: .6;
+    &:hover {
+      opacity: 0.6;
     }
   }
 
@@ -77,12 +83,247 @@
       fill: $dark_content;
     }
 
-    .social_link{
+    .social_link {
       transition: all 0.2s ease 0s;
 
-      &:hover{
-        opacity: .6;
+      &:hover {
+        opacity: 0.6;
       }
     }
   }
+}
+
+@media (max-width: 1537px) {
+  .header {
+    margin-top: 30px;
+    .logo {
+      font-size: 36px;
+    }
+    .menu {
+      width: 100%;
+      max-width: 720px;
+    }
+    .menu_list {
+      max-width: 720px;
+      .menu_link {
+        font-size: 18px;
+        line-height: 23px;
+      }
+      .menu_social {
+        max-width: 100px;
+        svg {
+          max-width: 25px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .header {
+    .menu {
+      width: 100%;
+      max-width: 620px;
+    }
+    .menu_list {
+      max-width: 620px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    margin-top: 30px;
+    .logo {
+      font-size: 30px;
+    }
+    .menu {
+      width: 100%;
+      max-width: 520px;
+    }
+    .menu_list {
+      max-width: 520px;
+      .menu_link {
+        font-size: 14px;
+        line-height: 23px;
+      }
+      .menu_social {
+        max-width: 100px;
+        svg {
+          max-width: 25px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 880px) {
+  .header {
+    margin-top: 30px;
+    position: relative;
+
+    &.dark {
+      .menu{
+        background-color: rgba(0, 0, 0, 0.5);
+        .menu_list {
+          background-color: #191919;
+        }
+        
+      }
+      .burger_open {
+        background: $light_content;
+        &::before {
+          background: $light_content;
+        }
+        &::after {
+          background: $light_content;
+        }
+      }
+    }
+    .logo {
+      font-size: 30px;
+    }
+    .menu {
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      bottom: 0;
+      position: fixed;
+      transform: translateX(250%);
+      transition: all 0.5s ease 0s;
+      right: 0;
+      flex-direction: column;
+      align-items: flex-end;
+      padding: 0px;
+      background-color: rgba(0, 0, 0, 0.2);
+      z-index: 10000;
+      &.open {
+        transition: all 0.5s ease 0s;
+        transform: translateX(0%);
+        right: 0;
+      }
+
+      .menu_list {
+        flex-direction: column;
+        align-items: flex-start;
+        height: 100%;
+        width: 100%;
+        justify-content:flex-start;
+        gap: 20px;
+        padding: 60px 20px;
+        max-width: 250px;
+        background-color: #fff;
+        box-shadow: 5px 5px 100px rgba(0, 0, 0, 0.2);
+      }
+      .menu_link {
+        font-size: 14px;
+        line-height: 23px;
+      }
+      .menu_social {
+        max-width: 100px;
+        svg {
+          max-width: 25px;
+        }
+      }
+    }
+    .burger_container{
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      right: 0;
+      display: block;
+    }
+
+    .hambergerIcon {
+      z-index: 10001;
+      height: 3.5px;
+      width: 35px;
+      position: absolute;
+      top: 50%;
+      right: 0%;
+      border-radius: 50px;
+      transform: translate(0%, -50%) rotate(0deg);
+      transition: all ease 0.5s;
+      background: $gradient_heading;
+      animation: gradientAnimation 5s infinite linear; // 10s - скорость анимации
+      background-size: 400%;
+      -webkit-background-clip: content-box;
+      -webkit-text-fill-color: transparent;
+      background-clip: content-box;
+      @keyframes gradientAnimation {
+        0% {
+          background-position: 80% 0%;
+        }
+        50% {
+          background-position: 20% 100%;
+        }
+        100% {
+          background-position: 80% 0%;
+        }
+      }
+      &::before,
+      &::after {
+        background: $gradient_heading;
+        animation: gradientAnimation 5s infinite linear; // 10s - скорость анимации
+        background-size: 400%;
+        -webkit-background-clip: content-box;
+        -webkit-text-fill-color: transparent;
+        background-clip: content-box;
+        content: '';
+        position: absolute;
+        height: inherit;
+        border-radius: inherit;
+        background-color: inherit;
+        margin: auto;
+        width: 50%;
+        transition: all ease 0.5s;
+      }
+      &::before {
+        top: -8px;
+        left: 0;
+        transform-origin: left;
+      }
+      &::after {
+        bottom: -8px;
+        right: 0;
+        transform-origin: right;
+      }
+    }
+
+    .burger_open {
+      width: 25px;
+      background: $dark_content;
+      transform: translate(0%, -50%) rotate(135deg);
+      &::before {
+        top: 0;
+        transform: translateX(100%) rotate(-90deg);
+        background: $dark_content;
+      }
+      &::after {
+        bottom: 0;
+        transform: translateX(-100%) rotate(-90deg);
+        background: $dark_content;
+      }
+    }
+  }
+}
+
+@media (max-width: 769px) {
+}
+
+@media (max-width: 600px) {
+}
+
+@media (max-width: 550px) {
+}
+
+@media (max-width: 480px) {
+}
+
+@media (max-width: 425px) {
+}
+
+@media (max-width: 375px) {
 }

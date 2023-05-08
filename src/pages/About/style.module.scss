@@ -106,3 +106,245 @@
     }
   }
 }
+
+@media (max-width: 728px) {
+  .about {
+    margin-top: 120px;
+    .about_block {
+      margin-bottom: 38px;
+    }
+    .title {
+      font-size: 32px;
+      line-height: 39px;
+    }
+    .text {
+      font-size: 18px;
+      line-height: 28px;
+    }
+    .institution {
+      padding: 0 0 24px;
+    }
+    .name_specialty {
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 4px;
+    }
+    .name_institution {
+      gap: 4px;
+      font-size: 12px;
+      line-height: 28px;
+    }
+    .second {
+      gap: 12px;
+    }
+    .employment {
+      max-width: 84px;
+      height: 24px;
+      font-size: 9px;
+      line-height: 26px;
+    }
+    .time {
+      font-size: 12px;
+      line-height: 28px;
+      gap: 4px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .about {
+    margin-top: 120px;
+    .about_block {
+      margin-bottom: 38px;
+    }
+    .title {
+      font-size: 28px;
+      line-height: 33px;
+    }
+    .text {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    .institution {
+      padding: 0 0 24px;
+    }
+    .name_specialty {
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 4px;
+      letter-spacing: 0;
+    }
+    .name_institution {
+      gap: 4px;
+      font-size: 12px;
+      line-height: 28px;
+      letter-spacing: 0;
+    }
+    .second {
+      gap: 12px;
+    }
+    .employment {
+      max-width: 84px;
+      height: 24px;
+      font-size: 9px;
+      line-height: 26px;
+    }
+    .time {
+      font-size: 12px;
+      line-height: 28px;
+      gap: 4px;
+      letter-spacing: 0;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .about {
+    margin-top: 120px;
+    .about_block {
+      margin-bottom: 38px;
+    }
+    .title {
+      font-size: 28px;
+      line-height: 33px;
+      margin-bottom: 20px;
+    }
+    .text {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    .first {
+      max-width: 228px;
+    }
+    .institution {
+      padding: 0 0 24px;
+    }
+    .name_specialty {
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 4px;
+      letter-spacing: 0;
+    }
+    .name_institution {
+      gap: 4px;
+      font-size: 12px;
+      line-height: 20px;
+      letter-spacing: 0;
+      align-items: flex-start;
+      svg {
+        width: 100%;
+        max-width: 12px;
+        margin-top: 5px;
+      }
+    }
+    .second {
+      gap: 12px;
+    }
+    .employment {
+      max-width: 84px;
+      height: 24px;
+      font-size: 9px;
+      line-height: 26px;
+    }
+    .time {
+      font-size: 12px;
+      line-height: 28px;
+      gap: 4px;
+      letter-spacing: 0;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+}
+
+@media (max-width: 425px) {
+  .about {
+    margin-top: 120px;
+    .about_block {
+      margin-bottom: 38px;
+    }
+    .title {
+      font-size: 28px;
+      line-height: 33px;
+      margin-bottom: 20px;
+    }
+    .text {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    .first {
+      max-width: 228px;
+      gap: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .institution {
+      padding: 0 0 24px;
+      align-items: flex-end;
+    }
+    .name_specialty {
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 0px;
+      letter-spacing: 0;
+    }
+    .name_institution {
+      gap: 4px;
+      font-size: 12px;
+      line-height: 20px;
+      letter-spacing: 0;
+      align-items: flex-start;
+      svg {
+        width: 100%;
+        max-width: 12px;
+        margin-top: 5px;
+      }
+    }
+    .second {
+      gap: 5px;
+    }
+    .employment {
+      max-width: 84px;
+      height: 24px;
+      font-size: 9px;
+      line-height: 26px;
+    }
+    .time {
+      font-size: 12px;
+      line-height: 20px;
+      gap: 4px;
+      letter-spacing: 0;
+
+      max-width: 84px;
+
+      align-items: flex-start;
+      svg {
+        width: 100%;
+        max-width: 12px;
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .about {
+    .institution {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .first {
+      max-width: 100%;
+    }
+    .second{
+      align-items: flex-start;
+      flex-direction: column-reverse;
+    }
+    .time {
+      max-width: 100%;
+    }
+  }
+}
