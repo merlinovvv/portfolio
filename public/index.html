@@ -14,7 +14,14 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Josefin+Sans&family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet" />
     <title>A.Merlinov - your web developer</title>
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NN0ELTVFEX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-NN0ELTVFEX');
+    </script>
     <style>
       body {
         margin: 0;
@@ -67,7 +74,7 @@
       const hour = new Date().getHours();
       const loaderBlock = document.getElementById('loader_block');
       const loader = document.getElementById('loader')
-      if (hour >= 19 || hour < 6) {
+      if (hour >= 19 || hour < 8) {
         loaderBlock.style.backgroundColor = '#191919';
 
       } else {
