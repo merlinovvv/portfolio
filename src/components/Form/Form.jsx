@@ -16,11 +16,11 @@ function Form() {
       fontSize: '16px',
       fontWeight: '400',
       color: '#a7a7a7',
-      padding: 0
+      padding: 0,
     }),
     valueContainer: (provided, state) => ({
       ...provided,
-      padding: 0
+      padding: 0,
     }),
     control: (provided, state) => ({
       ...provided,
@@ -106,14 +106,14 @@ function Form() {
         setLoading(true);
         await axios.post(apiUrl, {
           chat_id: chatId,
-          text: `*New request from your site:*\n\n*Sender:* ${
+          text: `<b>New request from your site:</b>\n\n<b>Sender:</b> ${
             values.username
-          }\n*Contact metod:* ${values.contact_method}\n*Contact link:* ${
-            values.contact_link
-          }\n${values.app ? `*App:* ${values.app}\n` : ''}${
-            values.text ? `*Text:* ${values.text}` : ''
-          }`,
-          parse_mode: 'Markdown', // Указываем формат Markdown
+          }\n<b>Contact method:</b> ${
+            values.contact_method
+          }\n<b>Contact link:</b> ${values.contact_link}\n${
+            values.app ? `<b>App:</b> ${values.app}\n` : ''
+          }${values.text ? `<b>Text:</b> ${values.text}` : ''}`,
+          parse_mode: 'HTML',
         });
       }
       setLoading(false);
@@ -142,8 +142,7 @@ function Form() {
 
   return (
     <div className={`${style.form_content} ${isNight() ? style.dark : ''}`}>
-      <div
-        className={style.text}>
+      <div className={style.text}>
         <h2 className={style.title}>Do you want to contact me?</h2>
         <p className={style.sub_title}>Leave a request and I will answer you</p>
       </div>
@@ -208,8 +207,8 @@ function Form() {
               </svg>
             </span>
             <Select
-            className={style.input}
-             key={`1_${selectKey}`}
+              className={style.input}
+              key={`1_${selectKey}`}
               styles={customStyles}
               isClearable={true}
               isSearchable={false}
@@ -396,8 +395,8 @@ function Form() {
               </svg>
             </span>
             <Select
-             className={style.input}
-            key={`2_${selectKey}`}
+              className={style.input}
+              key={`2_${selectKey}`}
               styles={customStyles}
               isClearable={true}
               isSearchable={false}
