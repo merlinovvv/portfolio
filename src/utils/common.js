@@ -6,8 +6,18 @@ import PAN_MYKOLA from '../img/pan-mykola.jpg';
 import POINT from '../img/point.jpg';
 import BETTER_REALTY from '../img/better-realty.jpg';
 import LEND from '../img/lend.jpg';
+import MIR_DETSTVA from '../img/mir-detstva.jpg';
 
 export const dataBase = [
+    {
+        id: 9,
+        img: MIR_DETSTVA,
+        name: 'Mir Detstva',
+        description: 'My first project using WordPress. Here I studied the most important things that are present in this tool.',
+        steck: 'HTML, JavaScript, CSS, PHP, WordPress',
+        preview: 'https://merlinov.pp.ua/childhood/',
+        code: 'https://github.com/merlinovvv/childhood'
+    },
     {
         id: 1,
         img: MAP_ALERT,
