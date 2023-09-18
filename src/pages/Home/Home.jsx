@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './style.module.scss';
-import ME from '../../img/me.jpg';
+import ME from '../../img/me2.jpg';
 import { isNight } from '../../utils/common';
 import { Projects, Stack, Form } from '../../components';
 import { motion } from 'framer-motion';

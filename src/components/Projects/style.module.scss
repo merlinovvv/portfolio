@@ -46,6 +46,37 @@
       color: $light_content;
     }
   }
+
+  .project_btn {
+    width: 100%;
+    max-width: 250px;
+    margin-top: 50px;
+    background: $gradient_heading;
+    animation: gradientAnimation 5s infinite linear; // 10s - скорость анимации
+    background-size: 400%;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 15px 0;
+    color: #fff;
+    transition: all 0.2s ease 0s;
+    text-align: center;
+    vertical-align: sub;
+    &:hover {
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+  }
+
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 80% 0%;
+    }
+    50% {
+      background-position: 20% 100%;
+    }
+    100% {
+      background-position: 80% 0%;
+    }
+  }
 }
 
 @media (max-width: 1024px) {
@@ -59,6 +90,14 @@
       font-size: 26px;
       line-height: 26px;
       margin-top: 20px;
+    }
+
+    .project_btn {
+      max-width: 250px;
+      margin-top: 50px;
+      font-size: 20px;
+      border-radius: 10px;
+      height: 50px;
     }
   }
 }
@@ -95,6 +134,14 @@
       font-size: 20px;
       line-height: 24px;
       margin-top: 10px;
+    }
+
+    .project_btn {
+      max-width: 180px;
+      margin-top: 20px;
+      font-size: 16px;
+      border-radius: 10px;
+      padding: 10px 0;
     }
   }
 }

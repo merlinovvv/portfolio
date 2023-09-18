@@ -7,8 +7,18 @@ import POINT from '../img/point.jpg';
 import BETTER_REALTY from '../img/better-realty.jpg';
 import LEND from '../img/lend.jpg';
 import MIR_DETSTVA from '../img/mir-detstva.jpg';
+import CONCORDIA from '../img/concordia.jpg';
 
 export const dataBase = [
+    {
+        id: 10,
+        img: CONCORDIA,
+        name: 'Concordia',
+        description: 'A rather complex and detailed landing page similar to WordPress.',
+        steck: 'HTML, JavaScript, CSS, PHP, WordPress',
+        preview: 'https://concordia-dim.com/',
+        code: 'https://github.com/merlinovvv/concordia'
+    },
     {
         id: 9,
         img: MIR_DETSTVA,
@@ -17,6 +27,15 @@ export const dataBase = [
         steck: 'HTML, JavaScript, CSS, PHP, WordPress',
         preview: 'https://merlinov.pp.ua/childhood/',
         code: 'https://github.com/merlinovvv/childhood'
+    },
+    {
+        id: 5,
+        img: PAN_MYKOLA,
+        name: 'Pan Mykola',
+        description: 'My first order. Corporate website with animations and sending an application by mail. Ordinary layout.',
+        steck: 'HTML, JavaScript, CSS, PHP',
+        preview: 'https://panmykola.lviv.ua/',
+        code: 'https://github.com/merlinovvv/pan-mykola'
     },
     {
         id: 1,
@@ -54,15 +73,7 @@ export const dataBase = [
         preview: 'https://master--jovial-axolotl-1d0f89.netlify.app/',
         code: 'https://github.com/merlinovvv/stuff-shop'
     },
-    {
-        id: 5,
-        img: PAN_MYKOLA,
-        name: 'Pan Mykola',
-        description: 'My first order. Corporate website with animations and sending an application by mail. Ordinary layout.',
-        steck: 'HTML, JavaScript, CSS, PHP',
-        preview: 'https://panmykola.lviv.ua/',
-        code: 'https://github.com/merlinovvv/pan-mykola'
-    },
+
     {
         id: 6,
         img: POINT,
